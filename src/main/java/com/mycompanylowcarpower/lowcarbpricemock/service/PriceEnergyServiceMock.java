@@ -1,4 +1,4 @@
-package com.mycompagny.lowcarbpower.lowcarpower.service;
+package com.mycompanylowcarpower.lowcarbpricemock.service;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -7,14 +7,14 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PriceEnergyService implements PriceEnergy {
+public class PriceEnergyServiceMock implements IPriceEnergyService {
 
   private static final double MIN_VALUE = 0.8;
   private static final double MAX_VALUE = 0.9;
   private static final int PRECISION = 4;
   private final Random randomValue;
 
-  public PriceEnergyService() {
+  public PriceEnergyServiceMock() {
     this.randomValue = new Random();
   }
 

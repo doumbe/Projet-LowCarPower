@@ -1,10 +1,10 @@
-package com.mycompagny.lowcarbpower.lowcarpower;
+package com.mycompanylowcarpower.lowcarbpricemock;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LowcarpowerApplicationTests {
+class LowcarbpricemockApplicationTests {
 
 	@Test
 	void contextLoads() {
