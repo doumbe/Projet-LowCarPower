@@ -1,12 +1,13 @@
 package com.mycompanylowcarpower.lowcarbpricemock.controller;
 
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mycompanylowcarpower.lowcarbpricemock.service.IPriceEnergyService;
+import com.mycompanylowcarpower.lowcarbpricemock.service.bo.MomentPrice;
 
 @RestController
 @RequestMapping("/lowcarprice")
@@ -17,21 +18,15 @@ public class PriceEnergyController {
   public PriceEnergyController(IPriceEnergyService priceEnergy) {
     this.priceEnergy = priceEnergy;
   }
-
-  /*
+/*
   @GetMapping("/latest")
-  public ResponseEntity<Price> getPrice() {
-    Price price = new Price();
-    Double randomValue = priceEnergy.getPrice().doubleValue();
-    price.setPrice(randomValue.toString());
-    return ResponseEntity.ok().body(price);
+  public ResponseEntity<BigDecimal> getPrice() {
+    return ResponseEntity.ok(priceEnergy.getPrice());
   }
-   */
-
-  @GetMapping("/latest")
-  public String getPrice() {
-    priceEnergy.getPrice().doubleValue();
-    return ResponseEntity.ok(priceEnergy).toString();
+*/
+@GetMapping("/latest")
+  public @ResponseBody MomentPrice getPrice() {
+    return priceEnergy.getPrice();
   }
 
 }
