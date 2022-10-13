@@ -31,4 +31,17 @@ public class PriceEnergyServiceMock implements IPriceEnergyService {
     momentPrice.setDate(LocalDate.now());
     return momentPrice;
   }
+/*
+  @Override
+  public BigDecimal getDisplayInvoice(BigDecimal nbKwh) {
+    return null;
+  }
+*/
+
+
+/*
+  @Override
+  public String getDisplayInvoice() {
+    return String.valueOf(Integer.parseInt(null));
+  }*/
 }
